@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+:root {
+    --darken: rgba(0, 0, 0, .2);
+}
+
+.bg-darken {
+    background: var(--darken);
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95dvh;
+}
+
+.bg-dark {
+    background: #333;
+}
+
+.text-light {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+select, input {
+    display: block;
+    padding: 2%;
+    background: var(--darken);
+    color: white !important;
+    border-radius: 10px;
+}
+
+header {
+    padding: 2%;
+    margin-bottom: 2%;
+    border-bottom: 2px solid var(--darken);
+}
+
+.container-round {
+    margin: 2%;
+    padding: 4%;
+    border: 2px var(--darken) solid;
+    box-shadow: 4px 4px 80px #333;
+    border-radius: 10px;
+}
+
+.overflow-auto {
+    overflow: auto;
+}
+
+#consultaDiv{
+    padding: 1em;
+    width: 40dvw;
+
+    & *{
+        margin-bottom: 1em;
+    }
+}
