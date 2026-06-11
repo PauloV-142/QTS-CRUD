@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: 21-Maio-2026 às 11:40
--- Versão do servidor: 5.7.19
--- PHP Version: 5.6.31
+-- Tempo de geração: 10-Jun-2026 às 10:48
+-- Versão do servidor: 8.0.31
+-- versão do PHP: 8.0.26
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -19,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `escola`
+-- Banco de dados: `alunos`
 --
 
 -- --------------------------------------------------------
@@ -30,19 +29,26 @@ SET time_zone = "+00:00";
 
 DROP TABLE IF EXISTS `alunos`;
 CREATE TABLE IF NOT EXISTS `alunos` (
-  `id` bigint(10) NOT NULL AUTO_INCREMENT,
+  `id` bigint NOT NULL AUTO_INCREMENT,
   `nome` varchar(100) NOT NULL,
   `instituicao` varchar(200) NOT NULL,
   `serie` varchar(4) NOT NULL,
   `curso` varchar(100) NOT NULL,
-  `cpf` int(11) NOT NULL,
-  `matricula` int(5) NOT NULL,
+  `cpf` varchar(11) NOT NULL,
+  `matricula` int NOT NULL,
   `data_nacimento` date NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `cpf` (`cpf`),
   UNIQUE KEY `matricula` (`matricula`),
   UNIQUE KEY `cpf_2` (`cpf`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `alunos`
+--
+
+INSERT INTO `alunos` (`id`, `nome`, `instituicao`, `serie`, `curso`, `cpf`, `matricula`, `data_nacimento`) VALUES
+(1, 'Gut', 'Eterx', '2', 'SBT', '4556456555', 23, '2026-06-01');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
