@@ -14,12 +14,10 @@
             </h1>
         </header>
         
-        <navbar>
-            <a href="#" id="btnSelect"> Consultar </a>
-            <a href="#" id="btnInsert"> Inserir </a>
-            <a href="#" id="btnUpdate"> Atualizar  </a>
-            <a href="#" id="btnRemove"> Remover </a>
-        </navbar>
+        <?php 
+            include_once("links.php");
+            echo $links;
+        ?>
 
         <main class="center">
         <form action="consultar.php">

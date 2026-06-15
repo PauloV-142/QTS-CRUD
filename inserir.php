@@ -7,34 +7,42 @@
         <title>Document</title>
     </head>
     <body class="bg-dark text-light">
-    
+
+        <?php
+            include_once("conexao.php");
+        ?>
+
         <?php 
         include_once("links.php");
         echo $links;
         ?>
-        
-        <form action="inserir.php" method="post">
-            <label for="nome">Nome:</label>
-            <input name="nome"></input>
+        <main class="center">
 
-            <label for="matricula">Matricula</label>
-            <input name="matricula"></input>
-            
-            <label for="instituicao" ></label>
-            <input name="instituicao"></input>
+            <form action="inserir.php" method="post">
+                <h2>Registrar Aluno</h2>
+                <div class="container-round bg-darken text-light" id="consultaDiv">
+                <label for="nome">Nome:</label>
+                <input name="nome"></input>
+                
+                <label for="data_nascimento" >Data de Nascimento</label>
+                <input name="data_nascimento"></input>
 
-            <label for="cpf" ></label>
-            <input name="cpf"></input>
+                <label for="cpf" >CPF</label>
+                <input name="cpf"></input>
 
-            <label for="serie" ></label>
-            <input name="serie"></input>
-
-            <label for="data_nascimento" ></label>
-            <input name="data_nascimento"></input>
-            
-            <label for="curso" ></label>
-            <input name="curso"></input>
-        </form>
-        
+                <label for="matricula">Matricula</label>
+                <input name="matricula"></input>
+                
+                <label for="instituicao" >Instituição</label>
+                <input name="instituicao"></input>
+                
+                <label for="serie" >Serie</label>
+                <input name="serie"></input>
+                
+                <label for="curso" >Curso</label>
+                <input name="curso"></input>
+                </div>
+            </form>
+        </main>
     </body>
 </html>
