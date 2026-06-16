@@ -7,13 +7,13 @@
         <title>Document</title>
     </head>
     <body class="bg-dark text-light">
-
-        <header>
-            <h1>
-                Atividade QTS operações CRUD
-            </h1>
-        </header>
+        <?php
         
+        if (isset($_POST['idAluno'])) {
+
+        }
+        
+        ?>
         <?php 
             include_once("components/links.php");
             echo $links;
@@ -35,11 +35,17 @@
                     <option value="matricula">Matrícula</option>
                 </select>
                 
-                <label for="idAln"> Id: </label> <!-- Script mudança (id, cpf, matricula) -->
-                <input type="text" name="idAln">
+                <label for="idAluno"> Id: </label> <!-- Script mudança (id, cpf, matricula) -->
+                <input type="text" name="idAluno">
 
+                <input type="submit" value="Buscar">
+            </div> 
+        </form>
 
-            </div> </form>
+        <?php
+        // Form de edição
+        
+        ?>
 
         </main>
 

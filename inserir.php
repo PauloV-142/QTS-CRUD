@@ -23,7 +23,7 @@
 
             include_once("conexao.php");
 
-            $sql_insert = "INSERT INTO alunos (nome, data_nacimento, cpf, matricula, instituicao, serie, curso) VALUES ('$nome', '$data_nascimento', '$cpf', $matricula, '$instituicao', '$serie', '$curso')";
+            $sql_insert = "INSERT INTO alunos (nome, data_nascimento, cpf, matricula, instituicao, serie, curso) VALUES ('$nome', '$data_nascimento', '$cpf', $matricula, '$instituicao', '$serie', '$curso')";
 
             $resultado = @mysqli_query($conexao, $sql_insert);
             echo "$resultado";

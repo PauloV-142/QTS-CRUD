@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS `alunos` (
   `curso` varchar(100) NOT NULL,
   `cpf` varchar(11) NOT NULL,
   `matricula` int NOT NULL,
-  `data_nacimento` date NOT NULL,
+  `data_nascimento` date NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `cpf` (`cpf`),
   UNIQUE KEY `matricula` (`matricula`),
@@ -47,7 +47,7 @@ CREATE TABLE IF NOT EXISTS `alunos` (
 -- Extraindo dados da tabela `alunos`
 --
 
-INSERT INTO `alunos` (`id`, `nome`, `instituicao`, `serie`, `curso`, `cpf`, `matricula`, `data_nacimento`) VALUES
+INSERT INTO `alunos` (`id`, `nome`, `instituicao`, `serie`, `curso`, `cpf`, `matricula`, `data_nascimento`) VALUES
 (1, 'Gut', 'Eterx', '2', 'SBT', '4556456555', 23, '2026-06-01');
 COMMIT;
 
