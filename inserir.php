@@ -33,7 +33,7 @@
         ?>
 
         <?php 
-        include_once("components/links.php");
+        include_once("components/header.php");
         echo $links;
         ?>
         <main class="center">
@@ -41,7 +41,7 @@
             <form action="inserir.php" method="post">
                 <h2>Registrar Aluno</h2>
                 
-                <div class="container-round bg-darken text-light" id="consultaDiv">
+                <div class="container-round bg-darken text-light" id="form-div">
                 
                 <div>
                     <label for="nome">Nome:</label>

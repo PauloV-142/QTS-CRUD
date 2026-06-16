@@ -15,13 +15,13 @@
         </header>
         
         <?php 
-            include_once("components/links.php");
+            include_once("components/header.php");
             echo $links;
         ?>
 
         <main class="center">
         <form action="consultar.php">
-            <div class="container-round bg-darken text-light" id="consultaDiv">
+            <div class="container-round bg-darken text-light" id="form-div">
                 <h2>
                     Consultar Dados
                 </h2>

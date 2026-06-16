@@ -35,13 +35,13 @@
         ?>
 
         <?php 
-            include_once("components/links.php");
+            include_once("components/header.php");
             echo $links;
         ?>
 
         <main class="center">
         <form action="consultar.php" method="post">
-            <div class="container-round bg-darken text-light" id="consultaDiv">
+            <div class="container-round bg-darken text-light" id="form-div">
                 <h2>
                     Consultar Dados
                 </h2>
@@ -97,7 +97,7 @@
                                     Matrícula: <?php echo $dados['matricula'] ?>
                                 </summary>
                                 <summary>
-                                    Data de Nascimento: <?php echo $dados['data_nacimento'] ?>
+                                    Data de Nascimento: <?php echo $dados['data_nascimento'] ?>
                                 </summary>
 
                             </details>
