@@ -15,7 +15,7 @@
         </header>
         
         <?php 
-            include_once("links.php");
+            include_once("components/links.php");
             echo $links;
         ?>
 

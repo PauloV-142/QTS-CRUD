@@ -15,7 +15,7 @@
         </header>
         
         <?php 
-            include_once("links.php");
+            include_once("components/links.php");
             echo $links;
         ?>
 
@@ -23,9 +23,8 @@
         <form action="consultar.php">
             <div class="container-round bg-darken text-light" id="consultaDiv">
                 <h2>
-                    Consultar Dados
+                    Atualizar Dados
                 </h2>
-
 
                 <label for="identifier">
                     Identificador
@@ -35,6 +34,7 @@
                     <option value="cpf">CPF</option>
                     <option value="matricula">Matrícula</option>
                 </select>
+                
                 <label for="idAln"> Id: </label> <!-- Script mudança (id, cpf, matricula) -->
                 <input type="text" name="idAln">
 
