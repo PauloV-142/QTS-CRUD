@@ -26,9 +26,13 @@
             $sql_insert = "INSERT INTO alunos (nome, data_nascimento, cpf, matricula, instituicao, serie, curso) VALUES ('$nome', '$data_nascimento', '$cpf', $matricula, '$instituicao', '$serie', '$curso')";
 
             $resultado = @mysqli_query($conexao, $sql_insert);
-            echo "$resultado";
-
-            $mysqli->close();
+            
+            if (!$resultado) {
+                die('Dados Inválidos: ' . @msqli_error($conexao));
+            } else {
+                echo "Registro Sucesso";
+            } 
+                mysqli_close($conexao);
             }
         ?>
 

@@ -93,6 +93,9 @@
             $i += 1;
             }
             }
+
+            // Dá pra criar um componente com isso tudo, em que Labels, Campos e Dados seriam os atributos (props).
+
             ?>
             <input type="submit" value="atualizar"></input>
         </div>
@@ -100,7 +103,37 @@
 
         <?php
         }}
-        echo implode($_POST);
+        if (isset($_GET)) {
+            echo implode($_GET);
+            include_once("conexao.php");
+
+            $id = $_GET['id'];
+            $nome = $_GET['nome'];
+            $instituicao = $_GET['instituicao'];
+            $serie = $_GET['serie'];
+            $curso = $_GET['curso'];
+            $cpf = $_GET['cpf'];
+            $matricula = $_GET['matricula'];
+            $data_nascimento = $_GET['data_nascimento'];
+
+            $sql_query = "UPDATE alunos SET 
+            nome = $nome,
+            instituicao = $instituicao,
+            serie = $serie,
+            curso = $curso,
+            cpf = $cpf,
+            matricula = $matricula,
+            data_nascimento = $data_nascimento,
+            WHERE id = $id";
+
+            $resultado = @mysqli_query($conexao, $sql_query);
+                
+            if (! $resultado) {
+                die("Atualização deu errado: " . @msqli_error($conexao));
+            } else {
+                echo "Atualização realizada com Sucesso";
+            }
+        }
         ?>
 
         </main>
