@@ -65,7 +65,7 @@
                 } else {
         ?>
 
-        <form action="atualizar.php" method="get">
+        <form action="atualizar.php" method="post">
         <div class="container-round bg-darken text-light" id="form-div">
             <h2>Atualizar Cadastro</h2>
 
@@ -103,18 +103,18 @@
 
         <?php
         }}
-        if (isset($_GET)) {
-            echo implode($_GET);
+        if (isset($_POST)) {
+            echo implode($_POST);
             include_once("conexao.php");
 
-            $id = $_GET['id'];
-            $nome = $_GET['nome'];
-            $instituicao = $_GET['instituicao'];
-            $serie = $_GET['serie'];
-            $curso = $_GET['curso'];
-            $cpf = $_GET['cpf'];
-            $matricula = $_GET['matricula'];
-            $data_nascimento = $_GET['data_nascimento'];
+            $id = $_POST['id'];
+            $nome = $_POST['nome'];
+            $instituicao = $_POST['instituicao'];
+            $serie = $_POST['serie'];
+            $curso = $_POST['curso'];
+            $cpf = $_POST['cpf'];
+            $matricula = $_POST['matricula'];
+            $data_nascimento = $_POST['data_nascimento'];
 
             $sql_query = "UPDATE alunos SET 
             nome = $nome,
