@@ -10,10 +10,10 @@
         
     <header> <h1> Atividade QTS operações CRUD </h1> </header> 
     <navbar> 
-        <a href='indexconsulta.php'> Consultar </a> 
-        <a href='indexinserir.php'> Inserir </a> 
-        <a href='indexatualizar.php'> Atualizar </a> 
-        <a href='indexremover.php'> Remover </a> 
+        <a href='pages/indexconsulta.php'> Consultar </a> 
+        <a href='pages/indexinserir.php'> Inserir </a> 
+        <a href='pages/indexatualizar.php'> Atualizar </a> 
+        <a href='pages/indexremover.php'> Remover </a> 
     </navbar>
 
     </body>

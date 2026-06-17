@@ -1,5 +1,10 @@
 # TODO
 
+## Páginas
+- [x] indexconsulta.php, consulta.php
+- [ ] indexinserir.php, inserir.php
+
+
 ## Funcionalidade
 ### `consultar.php`  
 - [ ] Mudar o `... WHERE $identifier=$value` do `$sql_query` de acordo com o valor do `<select id="identifier">` no form.

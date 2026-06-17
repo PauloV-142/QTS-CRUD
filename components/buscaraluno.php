@@ -1,5 +1,8 @@
+
+<!-- O ACTION do FORM é CUSTOMIZÁVEL -->
+
 <main class="center">
-    <form action="<?= $form_destino ?>" method="post">
+    <form action="<?= $form_action ?>" method="post">
         <div class="container-round bg-darken text-light" id="form-div">
             <h2>
                 Buscar Dados
@@ -24,10 +27,7 @@
 
         </div>
     </form>
-
 </main>
-
-<div> </div>
 
 <script>
     const selectItentifier = document.getElementById('identifier');
@@ -38,4 +38,3 @@
         variableLabel.textContent = selectItentifier.options[i].text + ":";
     })
 </script>
-?>

@@ -45,7 +45,7 @@ select, input {
 
 .container-round {
     margin: 2%;
-    padding: 4%;
+    padding: 2%;
     border: 2px var(--darken) solid;
     box-shadow: 4px 4px 80px #333;
     border-radius: 10px;
