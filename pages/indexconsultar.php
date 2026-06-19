@@ -13,7 +13,7 @@
     ?>
     
     <?php
-        $form_action = "../actions/consulta.php";
+        $form_action = "../actions/consultar.php";
         include("../components/buscaraluno.php");
     ?>
 

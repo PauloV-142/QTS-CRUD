@@ -1,15 +1,15 @@
 <?php
 /* Buscar os Dados: */
 
-include_once("../../conexao.php");
+include_once("../conexao.php");
 
-$message = "";
+$mensagem = "";
 
 if (isset($_POST['idAluno'])) {
     $alunoId = $_POST['idAluno'];
 
     if ($alunoId == "") {
-        $message = "Insira o ID do aluno.";
+        $mensagem = "Insira o ID do aluno.";
 
     } else {
         $sql_query = "SELECT * FROM alunos WHERE id=$alunoId"; // Adicionar a possibilidade de outros identificadores
@@ -19,9 +19,9 @@ if (isset($_POST['idAluno'])) {
         if (!$resultado) {
             die('Query Inválida: ' . @msqli_error($conexao));
         } else if (mysqli_num_rows($resultado) == 0) {
-            $message = "Não há alunos cadastrados com esse ID ainda.";
+            $mensagem = "Não há alunos cadastrados com esse ID ainda.";
         } else {
-            $message = "Request Sucesso.";
+            $mensagem = "Request Sucesso.";
             $sucesso = true;
         }
 
@@ -41,7 +41,7 @@ if (isset($_POST['idAluno'])) {
 <body class="bg-dark ">
     <main class="overflow-auto container-round bg-darken text-light">
         
-        <h3> Status: <?= $message ?> </h3>
+        <h3> Status: <?= $mensagem ?> </h3>
 
         <?php
         if (isset($sucesso)) {
@@ -87,6 +87,6 @@ if (isset($_POST['idAluno'])) {
             </ul>
         <?php }} ?>
     </main>
-    <a href="../pages/indexconsulta.php"> Voltar </a>
+    <a href="/QTSCRUD/pages/indexconsultar.php"> Voltar </a>
 </body>
 </html>
