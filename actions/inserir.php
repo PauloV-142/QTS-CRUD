@@ -30,21 +30,24 @@
         '$instituicao', 
         '$serie', 
         '$curso')";
-
-        $resultado = @mysqli_query($conexao, $sql_insert);
-
-        /* TRATAMENTO DE RESULTADO */
-        if (!$resultado) {
-            die('Dados Inválidos: ' . @msqli_error($conexao));
-            $mensagem = "Erro: Dados inválidos.";
-        } else {
-            $mensagem = "Registro sucesso";
-        } 
-            mysqli_close($conexao);
-    } else {
-        $mensagem = "Insira os dados antes de enviar.";
-    }
+        
 ?>
+<?php
+
+$resultado = @mysqli_query($conexao, $sql_insert);
+
+/* TRATAMENTO DE RESULTADO */
+if (!$resultado) {
+    die('Dados Inválidos: ' . @msqli_error($conexao));
+    $mensagem = "Erro: Dados inválidos.";
+    } else {
+        $mensagem = "Registro sucesso";
+        } 
+        mysqli_close($conexao);
+        } else {
+            $mensagem = "Insira os dados antes de enviar.";
+            }
+            ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -59,5 +62,10 @@
 
     <a href="/QTSCRUD/pages/indexinserir.php"> Voltar </a>
 
+    
+    <?php
+    #REMOVER
+     $sql_insert 
+     ?>
 </body>
 </html>

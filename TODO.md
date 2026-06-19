@@ -8,7 +8,10 @@
     - [ ] Definir o tamanho & tipos de dados dos inputs no form.
 
 - [x] indexremover.php, remover.php
-    - [ ] Issue: Ainda remove se o ID for inválido.
+    - [x] Issue: Ainda aparenta remover se o ID for inválido.
+
+- [ ] Pesquisar e remover seções com a tag `#REMOVER`
+
 
 ## Funcionalidade
 - [ ] Mudar o `... WHERE $identifier=$value` do `$sql_query` de acordo com o valor do `<select id="identifier">` no form.
@@ -21,3 +24,5 @@
 - [ ] Criar uma divisão para os dados pessoais e para dados escolares nos forms.
 
 - [ ] Higlight do link da página aberta em `components/header.php`
+
+- [ ] Uma página estilizada / componente apenas para mostrar mensagens de erro/sucesso -- Após realizar uma action
