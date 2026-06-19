@@ -19,7 +19,7 @@
             $btn_label = "Remover";
             include("../components/buscaraluno.php");
         ?>
-    <main class="center">
+    </main>
 
 </body>
 </html>

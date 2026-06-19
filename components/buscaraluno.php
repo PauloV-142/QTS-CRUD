@@ -9,6 +9,7 @@ function warn() {
 if (! isset($title)) { $title = "Buscar aluno";}
 if (! isset($form_action)) { $form_action = "consultar.php";}
 if (! isset($btn_label)) { $btn_label = "Buscar";}
+
 ?>
 
 <form action="<?= $form_action ?>" method="post">

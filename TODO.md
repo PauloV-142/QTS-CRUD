@@ -10,11 +10,15 @@
 - [x] indexremover.php, remover.php
     - [x] Issue: Ainda aparenta remover se o ID for inválido.
 
+- [ ] indexatualizar.php, atualizar.php
+    - As pág. indexInserir e formAtualizar conterão o mesmo form. :] Dá pra reutilizar :DDDDD
+    - Highlight the inputs modified by the user (JS)
+
 - [ ] Pesquisar e remover seções com a tag `#REMOVER`
 
 
 ## Funcionalidade
-- [ ] Mudar o `... WHERE $identifier=$value` do `$sql_query` de acordo com o valor do `<select id="identifier">` no form.
+- [ ] Script para mudar o IDENTIFIER em `buscaraluno.sql`.
 
 - [ ] Colocar máscaras de dados AAAA-MM-DD nos inputs. (JQuery)
 
@@ -26,3 +30,6 @@
 - [ ] Higlight do link da página aberta em `components/header.php`
 
 - [ ] Uma página estilizada / componente apenas para mostrar mensagens de erro/sucesso -- Após realizar uma action
+
+### Outro
+- [ ] Usar `htmlspecialchars($_POST['chave'])` em todos os inputs recebidos para defender contra XSS attacks (Cross-Site Scripting)
