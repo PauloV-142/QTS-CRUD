@@ -12,10 +12,14 @@
         include("../components/header.php");
     ?>
     
-    <?php
-        $form_action = "../actions/consultar.php";
-        include("../components/buscaraluno.php");
-    ?>
+    <main class="center">
+        <?php
+            $form_action = "../actions/consultar.php";
+            $title = "Buscar Dados";
+            $btn_label = "Remover";
+            include("../components/buscaraluno.php");
+        ?>
+    <main class="center">
 
 </body>
 </html>

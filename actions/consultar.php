@@ -9,6 +9,7 @@ if (isset($_POST['idAluno'])) {
     $alunoId = $_POST['idAluno'];
 
     if ($alunoId == "") {
+        # Add an option for more identifiers.
         $mensagem = "Insira o ID do aluno.";
 
     } else {

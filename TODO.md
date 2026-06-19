@@ -2,15 +2,18 @@
 
 ## Páginas
 - [x] indexconsulta.php, consulta.php
+    - Opção de listar todos os alunos cadastrados.
 - [x] indexinserir.php, inserir.php
     - Teste se os dados foram inseridos.
+    - [ ] Definir o tamanho & tipos de dados dos inputs no form.
 
+- [x] indexremover.php, remover.php
+    - [ ] Issue: Ainda remove se o ID for inválido.
 
 ## Funcionalidade
 - [ ] Mudar o `... WHERE $identifier=$value` do `$sql_query` de acordo com o valor do `<select id="identifier">` no form.
 
 - [ ] Colocar máscaras de dados AAAA-MM-DD nos inputs. (JQuery)
-- [ ] Definir o tamanho & tipos de dados dos inputs no form.
 
 ### Design
 - [ ] Seção para mensagens de erro. (Footer com variável $mensagem)

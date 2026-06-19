@@ -4,8 +4,9 @@
     include_once("../conexao.php");
     
     if (isset($_POST['nome'])) { # Form preenchido.
+    # TRY CATCH AQUI, PORQUE A QUERY AINDA É FEITA MESMO SE O FORM NÃO FOR TOTALMENTE PREENCHIDO.
 
-        # TRY CATCH AQUI, A QUERY AINDA É FEITA MESMO SE O FORM NÃO FOR PREENCHIDO CORRENTAMETNE.
+        
         /* PEGAR OS DADOS */
         $nome = $_POST["nome"];
         $data_nascimento = $_POST["data_nascimento"];
