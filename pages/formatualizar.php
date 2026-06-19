@@ -20,18 +20,21 @@
             die("Query deu errado: " . @msqli_error($conexao));
 
         } else {
-            $mensagem = "Request Sucesso";
+            $mensagem = "Query Sucesso";
             
             if (mysqli_num_rows($resultado) == 0) {
-                $mensagem = "<p>Não há alunos cadastrados com esse ID ainda</p>";
+                $mensagem = "<p>Não há alunos cadastrados com esse ID.</p>";
+            } else {
+                $query_success = true;
             }
         }
         
         mysqli_close($conexao);
         // Usar os dados para gerar o forms de edição
+    }
 ?>
 
-<?php function gerar_form_atualizar() { ?>
+<?php function gerar_form_atualizar($resultado) { ?>
 <form action="atualizar.php" method="post">
             <div class="container-round bg-darken text-light" id="form-div">
                 <h2>Atualizar Cadastro</h2>
@@ -72,7 +75,6 @@
 
 <?php } ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -86,16 +88,19 @@
     
     <?php include("../components/header.php"); ?>
 
-    <?= $mensagem ?>
+    <p><?= $mensagem ?></p>
 
 
 <main class="center">
     <?php /* FORM REUTILIZÁVEL EM indexinserir.php */
+
     if ($query_success) {
-        gerar_form_atualizar();
-    }}
+        gerar_form_atualizar($resultado);
+    }
 ?>
     </main>
+
+    <p>Status: <?= $query_success ?></p>
 
     <a href="/QTSCRUD/pages/indexatualizar.php"> Voltar </a>
 
