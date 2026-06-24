@@ -35,7 +35,7 @@
 ?>
 
 <?php function gerar_form_atualizar($resultado) { ?>
-<form action="atualizar.php" method="post">
+<form action="../actions/atualizar.php" method="post">
             <div class="container-round bg-darken text-light" id="form-div">
                 <h2>Atualizar Cadastro</h2>
 
@@ -54,7 +54,7 @@
                     <?= $labels[$i] ?>:
                 </label>
 
-                <input name="<?= $campo ?>" value=<?=$valor ?>
+                <input name="<?= $campo ?>" value="<?= $valor ?>"
                 <?= $campo == "id" ? "readonly" : "" ?>
                 style="margin-bottom: 1rem;"
                 >

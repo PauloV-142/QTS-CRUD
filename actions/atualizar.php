@@ -2,27 +2,22 @@
 /* QUERY DO UPDATE */
         if (isset($_POST)) {
             echo implode($_POST);
-            include_once("conexao.php");
+            include_once("../conexao.php");
 
             $id = $_POST['id'];
-            $nome = $_POST['nome'];
-            $instituicao = $_POST['instituicao'];
-            $serie = $_POST['serie'];
-            $curso = $_POST['curso'];
-            $cpf = $_POST['cpf'];
-            $matricula = $_POST['matricula'];
-            $data_nascimento = $_POST['data_nascimento'];
+            $nome = "`nome` = `". $_POST['nome'] . "`, ";
+            $instituicao = "`instituicao` = `". $_POST['instituicao'] . "`, ";
+            $serie = "`serie` = `". $_POST['serie'] . "`, ";
+            $curso = "`curso` = `". $_POST['curso'] . "`, ";
+            $cpf = "`cpf` = `". $_POST['cpf'] . "`, ";
+            $matricula = "`matricula` = `". $_POST['matricula'] . "`, ";
+            $data_nascimento = "`data_nascimento` = `". $_POST['data_nascimento'] ."`";
 
-            $sql_query = "UPDATE alunos SET 
-            nome = $nome,
-            instituicao = $instituicao,
-            serie = $serie,
-            curso = $curso,
-            cpf = $cpf,
-            matricula = $matricula,
-            data_nascimento = $data_nascimento,
-            WHERE id = $id";
-
+            $sql_query = "UPDATE alunos SET $instituicao $nome $serie $curso $cpf $matricula $data_nascimento WHERE id = $id";
+            
+            
+            echo $sql_query;
+            
             $resultado = @mysqli_query($conexao, $sql_query);
                 
             if (! $resultado) {
