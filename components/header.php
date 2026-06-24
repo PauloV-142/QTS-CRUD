@@ -1,7 +1,6 @@
 <?php
-$windows_path = "C:/wamp64/www/QTSCRUD";
 $jp_path = "/qts";
-$linux_path = "/QTSCRUD";
+$gut_path = "/QTSCRUD";
 ?>
 <header class="text-light"> <h1> Atividade QTS operações CRUD </h1> </header> 
     <navbar>    
