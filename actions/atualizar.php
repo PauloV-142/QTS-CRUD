@@ -5,13 +5,22 @@
             include_once("../conexao.php");
 
             $id = $_POST['id'];
-            $nome = "`nome` = `". $_POST['nome'] . "`, ";
-            $instituicao = "`instituicao` = `". $_POST['instituicao'] . "`, ";
-            $serie = "`serie` = `". $_POST['serie'] . "`, ";
-            $curso = "`curso` = `". $_POST['curso'] . "`, ";
-            $cpf = "`cpf` = `". $_POST['cpf'] . "`, ";
-            $matricula = "`matricula` = `". $_POST['matricula'] . "`, ";
-            $data_nascimento = "`data_nascimento` = `". $_POST['data_nascimento'] ."`";
+
+            $nome = $_POST['nome'];
+            $instituicao = $_POST['instituicao'];
+            $serie = $_POST['serie'];
+            $curso = $_POST['curso'];
+            $cpf = $_POST['cpf'];
+            $matricula = $_POST['matricula'];
+            $data_nascimento = $_POST['data_nascimento'];
+
+            $nome = "`nome` = '$nome',";
+            $instituicao = "`instituicao` = '$instituicao',";
+            $serie = "`serie` = '$serie',";
+            $curso = "`curso` = '$curso',";
+            $cpf = "`cpf` = '$cpf',";
+            $matricula = "`matricula` = '$matricula',";
+            $data_nascimento = "`data_nascimento` = '$data_nascimento'";
 
             $sql_query = "UPDATE alunos SET $instituicao $nome $serie $curso $cpf $matricula $data_nascimento WHERE id = $id";
             
