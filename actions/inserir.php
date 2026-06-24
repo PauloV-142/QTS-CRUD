@@ -60,7 +60,7 @@ if (!$resultado) {
     
     <?= $mensagem ?>
 
-    <a href="/QTSCRUD/pages/indexinserir.php"> Voltar </a>
+    <a href="../index.php"> Menu </a>
 
     
     <?php

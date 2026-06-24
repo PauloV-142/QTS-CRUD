@@ -16,7 +16,7 @@
         <?php
             $form_action = "../actions/consultar.php";
             $title = "Buscar Dados";
-            $btn_label = "Remover";
+            $btn_label = "Consultar";
             include("../components/buscaraluno.php");
         ?>
     </main>

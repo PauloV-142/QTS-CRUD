@@ -68,7 +68,7 @@
             // Dá pra criar um componente com isso tudo, em que Labels, Campos e Dados seriam os atributos (props).
 
             ?>
-                <input type="submit" value="atualizar"></input>
+                <input type="submit" value="Atualizar"></input>
             </div>
         </form>
 
@@ -102,7 +102,7 @@
 
     <p>Status: <?= $query_success ?></p>
 
-    <a href="/QTSCRUD/pages/indexatualizar.php"> Voltar </a>
+    <a href="../index.php"> Voltar </a>
 
 </body>
 

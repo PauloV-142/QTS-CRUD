@@ -51,6 +51,6 @@
     <p><?= $mensagem ?></p>
     <p><?= isset($mensagem_query) ? "$mensagem_query" : "" ?></p>
 
-    <a href="/QTSCRUD/pages/indexremover.php"> Voltar </a>
+    <a href="../index.php"> Voltar </a>
 </body>
 </html>

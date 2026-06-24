@@ -86,8 +86,8 @@ if (isset($_POST['idAluno'])) {
                     </details>
                 </li>
             </ul>
-        <?php }} ?>
+        <?php }} ?> 
     </main>
-    <a href="/QTSCRUD/pages/indexconsultar.php"> Voltar </a>
+    <a href="../index.php"> Menu </a>
 </body>
 </html>
