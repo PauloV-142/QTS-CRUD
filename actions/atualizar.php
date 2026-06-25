@@ -1,7 +1,6 @@
 <?php
 /* QUERY DO UPDATE */
         if (isset($_POST)) {
-            echo implode($_POST);
             include_once("../conexao.php");
 
             $id = $_POST['id'];
@@ -24,9 +23,6 @@
 
             $sql_query = "UPDATE alunos SET $instituicao $nome $serie $curso $cpf $matricula $data_nascimento WHERE id = $id";
             
-            
-            echo $sql_query;
-            
             $resultado = @mysqli_query($conexao, $sql_query);
                 
             if (! $resultado) {
@@ -36,3 +32,4 @@
             }
         }
         ?>
+        <p><a href="../pages/indexatualizar.php"> Voltar </a></p>

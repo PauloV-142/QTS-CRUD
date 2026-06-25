@@ -20,7 +20,7 @@ if (isset($_POST['idAluno'])) {
         if (!$resultado) {
             die('Query Inválida: ' . @msqli_error($conexao));
         } else if (mysqli_num_rows($resultado) == 0) {
-            $mensagem = "Não há alunos cadastrados com esse ID ainda.";
+            $mensagem = "Não há alunos cadastrados com esse ID.";
         } else {
             $mensagem = "Request Sucesso.";
             $sucesso = true;
@@ -88,6 +88,6 @@ if (isset($_POST['idAluno'])) {
             </ul>
         <?php }} ?> 
     </main>
-    <a href="../index.php"> Menu </a>
+    <p><a href="../pages/indexconsultar.php"> Voltar </a></p>
 </body>
 </html>

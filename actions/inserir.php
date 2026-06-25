@@ -60,12 +60,6 @@ if (!$resultado) {
     
     <?= $mensagem ?>
 
-    <a href="../index.php"> Menu </a>
-
-    
-    <?php
-    #REMOVER
-     $sql_insert 
-     ?>
+    <p><a href="../pages/indexinserir.php"> Voltar </a></p>
 </body>
 </html>

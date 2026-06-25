@@ -40,39 +40,48 @@
                 <h2>Atualizar Cadastro</h2>
 
                 <?php
-            $labels = ["ID", "Nome", "Instituição", "Série", "Curso", "CPF", "Matrícula", "Data de Nascimento"];
-            $campos = ["id", "nome", "instituicao", "serie", "curso", "cpf", "matricula", "data_nascimento"];
-
-            $i = 0;
             while ($dados = mysqli_fetch_array($resultado)) {
+                    $id = $dados["id"];
+                    $nome = $dados["nome"];
+                    $instituicao = $dados["instituicao"];
+                    $serie = $dados["serie"];
+                    $curso = $dados["curso"];
+                    $cpf = $dados["cpf"];
+                    $matricula = $dados["matricula"];
+                    $data_nascimento = $dados["data_nascimento"];
+                ?>
 
-                foreach ($campos as $campo) {
-                    $valor = $dados[$campo];
-                    ?>
+            <div>
+                <label for="id">ID:</label>
+                <input minlength="6" maxlength="100" name="id" value="<?= $id ?>" readonly required></input>
 
-                <label for="<?= $campo ?>">
-                    <?= $labels[$i] ?>:
-                </label>
+                <label for="nome">Nome:</label>
+                <input minlength="6" maxlength="100" name="nome" value="<?= $nome ?>" required></input>
 
-                <input name="<?= $campo ?>" value="<?= $valor ?>"
-                <?= $campo == "id" ? "readonly" : "" ?>
-                style="margin-bottom: 1rem;"
-                >
-                </input>
+                <label for="data_nascimento">Data de Nascimento</label>
+                <input type="date" name="data_nascimento" value="<?= $data_nascimento ?>" required></input>
 
-                <?php
-            $i += 1;
-            }
-            }
+                <label for="cpf" id="cpfinput"> CPF (apenas numeros) </label>
+                <input maxlength="11" name="cpf" value="<?= $cpf ?>" required></input>
+            </div>
 
-            // Dá pra criar um componente com isso tudo, em que Labels, Campos e Dados seriam os atributos (props).
+            <div>
+                <label for="matricula">Matricula</label>
+                <input minlength="5" maxlength="5" name="matricula" value="<?= $matricula ?>" required></input>
 
-            ?>
+                <label for="instituicao">Instituição</label>
+                <input minlength="7" maxlength="200" name="instituicao" value="<?= $instituicao ?>" required></input>
+
+                <label for="serie">Serie</label>
+                <input minlength="3" maxlength="4" name="serie" value="<?= $serie ?>" required></input>
+
+                <label for="curso">Curso</label>
+                <input minlength="2" maxlength="100" name="curso" value="<?= $curso ?>" required></input>
+
                 <input type="submit" value="Atualizar"></input>
             </div>
+            <?php } ?>
         </form>
-
-
 <?php } ?>
 
 <!DOCTYPE html>
@@ -102,7 +111,7 @@
 
     <p>Status: <?= $query_success ?></p>
 
-    <a href="../index.php"> Voltar </a>
+    <a href="../pages/indexatualizar.php"> Voltar </a>
 
 </body>
 

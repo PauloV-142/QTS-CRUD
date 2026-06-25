@@ -51,6 +51,6 @@
     <p><?= $mensagem ?></p>
     <p><?= isset($mensagem_query) ? "$mensagem_query" : "" ?></p>
 
-    <a href="../index.php"> Voltar </a>
+    <p><a href="../pages/indexremover.php"> Voltar </a></p>
 </body>
 </html>
